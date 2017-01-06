@@ -1,0 +1,148 @@
+<script type="text/javascript">
+// ## Long-long Vowels
+
+// Given a word as a string, print the result of extending any long vowels to the length of 5. Examples:
+// Good => Goooood
+// Cheese => Cheeeeese
+// Man => Man
+// Spoon => Spooooon
+// #loop #string #medium
+
+var possibleMatches =["aa", "ee", "ii", "oo", "uu"];
+
+var extraVowels = "";
+
+function checkVowels(word){
+	for(var i=0; i < possibleMatches.length; i++){ 
+		if(word.indexOf(possibleMatches[i]) !== -1){ // There is a match
+			var extraVowels = (possibleMatches[i]*3) 
+			var wordArray = word.split("");
+			var longWord = wordArray.splice(word.indexOf(possibleMatches[i]), 0, possibleMatches[i][0], possibleMatches[i]);
+			wordArray.join('');
+			console.log(wordArray.join(''));
+		}
+	}
+}
+
+checkVowels("food");
+
+
+
+
+// Given a year as a number (ex: 2016), print the number of Friday-the-thirteens in that year. Read about how to construct dates closely to get ideas on how to implement this: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date> #date #loop #medium #math
+// --SUPER BONUS-- How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+
+
+function fridays(year){
+	var d = new Date();
+	var n = d.setDate(year);
+	console.log(n); //# of milliseconds between 1970 and 2015.
+
+	for(var i = 0; i <= 11; i++){ //loop through 12 months
+		if(getdate(not actually) )
+
+	//if in the array days[0-6], sunday is days[0]. if days[0] corresponds with date[1] (ie. the 1st of the month is a sunday), then friday must be the thirteenth of the month. 
+
+	//collect array of fridays and another array of 13th days of the months of the entire passed year
+	//if day[5] && date[13], push to a new array called count. , console.log(count.length);
+}
+
+
+fridays(2015);
+
+
+// ## Leetspeak
+// Given a paragraph of text as a string, print the paragraph in leetspeak. To translate a string to leetspeak, you need to replace make the following character replacements (treat all input characters as uppercase):
+// A => 4
+// E => 3
+// G => 6
+// I => 1
+// O => 0
+// S => 5
+// T => 7
+// Example: Leet => l337
+// #string #loop #medium
+var normals= ["A," "E", "G", "I", "O", "S", "T"];
+var leets = ["4", "3", "6", "1", "0", "5", "7"];
+paragraph = "";
+
+function transform(paragraph){
+	paragraph.
+
+}
+
+
+
+
+    var letterSearch = ['A', 'E', 'G', 'I', 'O', 'S', 'T'];
+    var leetVersion = ['4', '3', '6', '1', '0', '5', '7'];
+
+
+function leetSpeak(words){
+    let complete = words;
+    for (let i = 0; i < letterSearch.length; i++){
+        if(complete.indexOf(letterSearch[i]) !== -1){
+            console.log("Found a match!");
+            let splitWord = complete.split("");
+            let combined = splitWord.splice(complete.indexOf(letterSearch[i]), 1, leetVersion[i]);
+            complete = splitWord.join("");
+            console.log(complete);
+            // console.log(combined);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// Given a year as a number (ex: 2016), print the number of Friday-the-thirteens in that year. Read about how to construct dates closely to get ideas on how to implement this
+    
+    function fridayThirteen(year){
+        let count = 0;
+        let countArray = [];
+        // let yearStart = new Date(year, 0);
+
+        for (let i = 0; i < 12; i++){
+            let dateToAdd = new Date(year, i, 13);
+            countArray.push(dateToAdd);
+        }
+
+        for (let i = 0; i < countArray.length; i++) {
+            if(countArray[i].getDay() === 5){
+                count++;
+            }
+        }
+        console.log(count);
+    }
+
+fridayThirteen(2000);
+
+
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
