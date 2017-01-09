@@ -27,6 +27,46 @@ caseConvert('ha-ba2-ca3-da4', 'camelcase')
 caseConvert('ha-ba2-ca3-da4', 'snakecase')
 
 
+// Write a Roman numeral converter. The program should be passed an integer and return the correct Roman numeral.
+// If you finish early, please do the reverse. Accept a roman numeral, and convert it to an integer
+// Rules: http://www.factmonster.com/ipka/A0769547.html
+// Your converter should work up to 1009
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			
 var SandraTheApe = `
 
