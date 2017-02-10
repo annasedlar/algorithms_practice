@@ -29,6 +29,7 @@ function convertPhone(phoneStr){
   
   if(length<10){
     console.log("You must provide a number with 10 digits");
+    
   }else if(length >= 10){
     perfLength = phoneAsString.slice(0, 10)
     
