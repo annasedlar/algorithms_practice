@@ -6,20 +6,6 @@
 // BONUS: if not enough numbers are provided, check to see if there are any letters that can be 
 // converted to numbers via the number pad mapping.
  
-// Consider the possible inputs:
-// 555-555-5555
-// (555)555-5555
-// 555 555 5555
-// 555 555-555
-// 1-555-555-5555
-// (1)555-555-5555
-// 5555555555
-// 555-five-55-aebdgtxi;;3tt4greqr6seven
-// 5-trumprules-555-5-5-5-5-5-5
-// 2798504trumpforprez23587928579428795458792
-// 1-800-ninjas-are-cool
-// 1900-acdc4life.
-
 function convertPhone(phoneStr){
   var perfLength;
   var phoneAsString = phoneStr.toString();
@@ -27,22 +13,32 @@ function convertPhone(phoneStr){
   var length = phoneAsString.length;
   console.log(length);
   
-  if(length<10){
+  // If there are less than 10 characters, provide error
+  if (length<10){
     console.log("You must provide a number with 10 digits");
-    
-  }else if(length >= 10){
+  } else if(length >= 10){
+    // if the number were formatted perfectly, it would have 10 characters
     perfLength = phoneAsString.slice(0, 10)
     
+    // divide number into it's parts
     var firstThree = perfLength.slice(0,3);
     var secondThree = perfLength.slice(3,6);
     var lastFour = perfLength.slice(6, 10);
     
-    var newString = firstThree + "-" + secondThree + "-" + lastFour;
-    console.log(newString)
-    var phoneRegEx = newString.match(/\d{3}.\d{3}.\d{4}/);
+    // add formatting for readability
+    var newStringPhoneNum = firstThree + "-" + secondThree + "-" + lastFour;
+
+    // print formatted phone number
+    console.log(newStringPhoneNum)
+
+    // define new variable to match 
+    var phoneRegEx = newStringPhoneNum.match(/\d{3}.\d{3}.\d{4}/);
+    // if it's a match
     if(phoneRegEx){
+      // return phone number
       console.log(phoneRegEx);
     }else{
+      // alert user with error
       console.log("Not a valid format");
     }
   }
