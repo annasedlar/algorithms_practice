@@ -67,3 +67,26 @@ function countingValleys(n, s) {
   }
   return numberOfAbsoluteValleys;
 }
+
+
+
+// REFACTOR
+
+function countingValleys(n, s) {
+  //convert string into array (to use forEach() )
+  let stepArray = s.split('');
+  let numberOfAbsoluteValleys = 0; 
+
+  //sea level
+  let currentAltitude = 0;
+
+  //track each step
+  stepArray.forEach(step => {
+      if(currentAltitude === 0 && step === 'D'){
+          numberOfAbsoluteValleys += 1;
+      }
+      //need to know if we go negative THEN positive = 1 valley
+      step === 'U' ? currentAltitude += 1 : currentAltitude -= 1;
+  });
+  return numberOfAbsoluteValleys;
+}
