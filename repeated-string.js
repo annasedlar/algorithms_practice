@@ -62,17 +62,29 @@ function repeatedString(s, n) {
     // solution found: https://stackoverflow.com/questions/53509604/js-repeated-string-hackerrank-challenge
     // comments my own
     
-    // turn s into array so you can filter it by a and find the length of new array
-    const as = s.split("").filter(char => char === "a").length;
-    //take whole number of times s appears
-    const times = parseInt(n / s.length);
-    //find remainder
-    const rest = n % s.length;
+    // // turn s into array so you can filter it by a and find the length of new array
+    // const as = s.split("").filter(char => char === "a").length;
+    // //take whole number of times s appears
+    // const times = parseInt(n / s.length);
+    // //find remainder
+    // const rest = n % s.length;
 
-    const totalAs = as * times
-        //make new array from just the length of remainder, filter by a's, return length
-        + s.slice(0, rest).split("").filter(c => c === "a").length
+    // const totalAs = as * times
+    //     //make new array from just the length of remainder, filter by a's, return length
+    //     + s.slice(0, rest).split("").filter(c => c === "a").length
 
-    return totalAs; 
+    // return totalAs; 
+
+    //my refactor of the above: 
+    const stringOfAs = s.split("").filter(character => character === "a");
+    const lengthOfStringOfAs = stringOfAs.length;
+
+    let multiplier = parseInt(n / s.length);
+    let remainder = n % s.length;
+
+    let totalAs = multiplier * lengthOfStringOfAs;
+    totalAs = totalAs + s.slice(0, remainder).split("").filter(character => character === "a").length;
+    
+    return totalAs;
 }
 
