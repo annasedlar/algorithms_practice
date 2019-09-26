@@ -1,4 +1,5 @@
-// Create a function that accepts an array parameter with duplicate values and returns a new array without duplicates.
+// Create a function that accepts an array parameter with duplicate values 
+// and returns a new array without duplicates.
 
 function filterArray(arr) {
 	let uniques = [];
