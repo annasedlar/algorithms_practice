@@ -7,6 +7,15 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // })
 
 const canDrink = ages.filter(age => age >= 21)
+
+//sort ages in ascending order
+const sortAges = ages.sort((a,b) => a - b)
+
+//reduce
+
+// let ageSum = 0; 
+ages.reduce((total, age) => total + age, 0)
+
 // =================================================================
 // =================================================================
 // =================================================================
@@ -32,9 +41,9 @@ const eightiesCompanies = companies.filter(company => (company.start <= 1980 && 
 
 const companiesLastingTenYears = companies.filter(company => (company.end - company.start >= 10))
 
+//sort companies by start year
+const sortedCompanies = companies.sort((a,b) => (a.start > b.start ? 1 : -1))
 
 
-
-
-
+const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
 
